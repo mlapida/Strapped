@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700' rel='stylesheet' type='text/css' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %} {{ AUTHOR }}'s Page{% endblock %}</title>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        font-family: 'Noticia Text', serif;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 48px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+      
+      .jumbotron .lead {
+        font-size: 20px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+      .marketing p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container-narrow">
+        {% block header %}
+            {% include "header.html" %}
+        {% endblock %}
+        
+        <div class="row-fluid marketing">
+        {% block content %} {% endblock %}
+        <div id="push"></div>
+        </div>
+
+        {% block footer %}
+            {% include "footer.html" %}
+        {% endblock %}
+    </div>
+    
+    <script src="./theme/js/bootstrap.js"></script>
+  </body>
+</html>
+

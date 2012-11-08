@@ -1,0 +1,9 @@
+
+<div class="masthead">
+    <h3 class="muted"><a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a></h3>
+    <ul class="nav nav-pills pull-right">
+        {% for section in SECTIONS %}
+            <li><a href="{{ SITEURL }}/{{ section[1]}}">{{ section[0] }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
