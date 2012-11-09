@@ -5,10 +5,11 @@
 {% block content %}
 <div class="">
     <h1> {{ article.title }}</h1>
-    <p class="mute"><i class="icon-calendar"></i> {{ article.date.strftime('%d %B %Y') }} </p>
+    <p class="muted">by {{ AUTHOR }} <br />
+    <i class="icon-calendar"></i> {{ article.date.strftime('%d %B %Y') }} </p>
     <p class="lead">{{ article.content }}</p>
     
-    <p class=tags>This entry was tagged as
+    <p class=tags><i class="icon-tag"></i> This entry was tagged as
       {% for tag in article.tags %}
       <a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a>
       {% endfor %}
